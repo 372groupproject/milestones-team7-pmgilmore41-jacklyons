@@ -1,0 +1,8 @@
+Part B - Jack Lyons & Patrick Gilmore
+
+1. Milanesi, Carlo. Beginning Rust: From Novice to Professional. Apress, 2018
+2. https://www.rust-lang.org/learn
+3. https://doc.rust-lang.org/reference/index.html
+4. https://www.reddit.com/r/rust/
+5. A major project coded in Rust is Servo by Mozilla. Which was a brand new browser engine. https://hugotunius.se/2017/10/22/5-awesome-rust-projects.html
+6.  Install instructions here https://www.rust-lang.org/tools/install
