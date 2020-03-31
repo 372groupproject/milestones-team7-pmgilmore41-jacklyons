@@ -1,1 +1,10 @@
 
+helloword.rs -- exercise general printing abilities and how to start and compile a Rust program
+
+snippet1.rs -- fun practice with taking user input and doing something with it. This is just an echo of what they type
+
+switch.rs -- this is using a control structure similar to the switch structure in java but in Rust it is match
+
+control.rs -- first practice using if an else statements
+
+control2.rs -- changing the ordering of control.rs to see effects
