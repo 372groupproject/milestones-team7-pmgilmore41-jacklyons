@@ -8,3 +8,12 @@ switch.rs -- this is using a control structure similar to the switch structure i
 control.rs -- first practice using if an else statements
 
 control2.rs -- changing the ordering of control.rs to see effects
+
+p2_if.rs -- show the effects of if else variable assignment
+
+p2_loop.rs -- use the loop structure with variable assignment
+
+p2_while.rs -- simple while loop
+
+p2_for.rs -- uses the for structure to loop through an array
+
