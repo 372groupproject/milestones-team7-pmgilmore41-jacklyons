@@ -1,0 +1,5 @@
+In an effor to utilize the nice features of Rust in terms of memory management we want to use allocatable memory in this program that we do
+not have to worry about cleaning up. To do this we will make a game that has custom structs that will represent game pieces or boards. It should
+prompt us to make files for these structs with a variety of impls for each struct so the structs can have special self behavior that helps play 
+the game. It would probably be fair to say the supporting files be 50-100 lines and the main being 200+ lines but much of that depends on the 
+complexity of the game. If done right our demo will should off the memeory managament and the enhanced safety features that Rust has.
