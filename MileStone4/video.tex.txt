@@ -1,0 +1,9 @@
+Plans for the Video:
+
+Because I dont feel we are quite ready to code live during the video i think we will go down the topics on the term paper
+about a minute a topic tops and as we go through this we will pull up the snippet that best highlights that topic. This 
+will likely just be done via a zoom meeting that we record with one screen that has all the snippets sharing. Most likely all 
+the feature programs will make it in and then we move on to the main demo for the last section of time where we will scan
+quickly through all the code and files before running the code and using it for a few iteration of the game. Ideally we end
+after covering the main unique syntax features that rust has so people realize it is similar to what they already know with
+a few key changes.
