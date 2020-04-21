@@ -1,5 +1,4 @@
 use std::io;
-use std::panic;
 mod lib;
 
 fn main() {
@@ -25,6 +24,28 @@ fn main() {
         col = buff.trim().parse::<usize>().unwrap();
 
         win = board.drop(1, col);
+        if win == -1 {
+            println!("You cannot use this column as it is full!");
+            continue;
+        }
+        if win == 1 {
+            println!("You won!");
+            win = 2;
+            break;
+        }
+        let computer = board.compdrop();
+        win = board.drop(2, computer);
+
+        if board.isfull() {
+            break;
+        }
+    }
+
+    if win == 1 {
+        println!("Sorry you lost");
+    }
+    else if win == 0{
+        println!("It was a tie!");
     }
     
 }

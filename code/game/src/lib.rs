@@ -1,4 +1,8 @@
+extern crate rand;
+
+
 pub mod connect4 {
+    use rand::Rng;
     pub struct Connect4Board{
         board: [[i16; 7] ; 6],
         freespots: i16,
@@ -12,22 +16,50 @@ pub mod connect4 {
             }
         }
 
+        pub fn isfull(self) ->bool{
+           let ret = if self.freespots == 0 {
+               true
+           }
+           else {
+                false
+           };
+
+           ret
+        }
         pub fn display(self) {
+            println!("[0][1][2][3][4][5][6]");
             for row in self.board.iter(){
                 for col in row.iter(){
-                    print!("{} ", col);
+                    print!(" {} ", col);
                 }
                 println!();
             }
         }
 
+        #[allow(unused_assignments)]
+        pub fn compdrop(&mut self) -> usize{
+            let mut avail = Vec::new();
+            let row: usize = 0;
+            let mut col: usize = 0;
+
+            while col < 6 {
+                if self.board[row][col] == 0 {
+                    avail.push(col);
+                }
+                col += 1;
+            }
+            
+            let mut rng = rand::thread_rng();
+            let index: usize = rng.gen::<usize>() % (avail.len() as usize);
+
+            index
+        }
         pub fn drop(&mut self, player: i16, col: usize) -> i32 {
             let mut i: usize = 0;
             let mut bad = 0;
             while i < 6 {
                 let ret = if self.board[i][col] != 0 {
                     if i == 0 {
-                        println!("You cannot use this column as it is full!");
                         bad = -1;
                         -1
                     }
@@ -46,7 +78,7 @@ pub mod connect4 {
                 };
 
                 if ret != 0 {
-                    self.freespots += 1;
+                    self.freespots = self.freespots - 1;
                     break;
                 }
             }
@@ -90,6 +122,18 @@ pub mod connect4 {
                     }
                     if i >= 3 {
                         win = Connect4Board::fourrow(board, (i-3) as usize, j as usize, i as usize, j as usize, player);
+                        if win {
+                            break;
+                        }
+                    }
+                    if (i >= 3) & (j <= 3) {
+                        win = Connect4Board::fourrow(board, (i-3) as usize, j as usize, i as usize, (j+3) as usize, player);
+                        if win {
+                            break;
+                        }
+                    }
+                    if (i <= 2) & (j <= 3) {
+                        win = Connect4Board::fourrow(board, i as usize, j as usize, i+3 as usize, (j+3) as usize, player);
                         if win {
                             break;
                         }
