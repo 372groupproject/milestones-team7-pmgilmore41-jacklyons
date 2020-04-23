@@ -1,0 +1,5 @@
+This has the games for the final program and this is how to run in
+
+type on terminal cargo run
+
+This will compile and execute the main.rs file
