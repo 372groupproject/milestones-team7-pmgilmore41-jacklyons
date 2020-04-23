@@ -25,6 +25,11 @@ runloop: p2_loop
 runswitch: switch
 	./switch
 
+struct: struct.rs
+	rustc struct.rs
 
+runstruct: struct
+	./struct
+	
 clean:
 	find . -depth 1 -type f -not -name '*.rs' -not -name 'Makefile' -delete
