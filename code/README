@@ -17,3 +17,9 @@ p2_while.rs -- simple while loop
 
 p2_for.rs -- uses the for structure to loop through an array
 
+
+
+For the main game cd into Game folder and type on terminal
+
+cargo run
+
