@@ -16,7 +16,7 @@ pub mod connect4 {
             }
         }
 
-        pub fn isfull(self) ->bool{
+        pub fn isfull(self) ->bool {
            let ret = if self.freespots == 0 {
                true
            }

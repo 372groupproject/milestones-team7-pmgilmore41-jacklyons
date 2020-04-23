@@ -29,6 +29,7 @@ fn main() {
             continue;
         }
         if win == 1 {
+            board.display();
             println!("You won!");
             win = 2;
             break;
@@ -40,7 +41,8 @@ fn main() {
             break;
         }
     }
-
+    
+    
     if win == 1 {
         println!("Sorry you lost");
     }
