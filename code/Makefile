@@ -130,7 +130,24 @@ tuple : tuple.rs
 runtuple: tuple
 	./tuple
 	
+borrow : borrow.rs
+	rustc borrow.rs
 
+runborrow: borrow
+	./borrow
+
+life : life.rs
+	rustc life.rs
+
+runlife: life
+	./life
 	
+
+p5_feature : p5_feature.rs
+	rustc p5_feature.rs
+
+runp5_feature: p5_feature
+	./p5_feature
+
 clean:
 	find . -depth 1 -type f -not -name '*.rs' -not -name 'Makefile' -delete
